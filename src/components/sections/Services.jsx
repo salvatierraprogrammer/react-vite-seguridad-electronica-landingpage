@@ -2,6 +2,9 @@ import { Container, Grid, Card, CardContent, Typography, Box } from "@mui/materi
 import SecurityIcon from "@mui/icons-material/Security";
 import CameraIcon from "@mui/icons-material/CameraAlt";
 import SettingsIcon from "@mui/icons-material/Settings";
+import { motion } from "framer-motion"; // ✅ Importar motion
+
+const MotionCard = motion(Card); // ✅ Crear componente animado
 
 const Services = ({ id }) => {
   const services = [
@@ -38,7 +41,11 @@ const Services = ({ id }) => {
       <Grid container spacing={4}>
         {services.map((service, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card
+            <MotionCard
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
               sx={{
                 textAlign: "center",
                 p: 4,
@@ -61,7 +68,7 @@ const Services = ({ id }) => {
                   {service.description}
                 </Typography>
               </CardContent>
-            </Card>
+            </MotionCard>
           </Grid>
         ))}
       </Grid>

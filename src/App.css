@@ -1,0 +1,8 @@
+/* App.css */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px; /* Ajusta el valor según la altura de tu AppBar */
+}

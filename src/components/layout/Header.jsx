@@ -1,7 +1,19 @@
-import { AppBar, Toolbar, Typography, Button, Box, IconButton, Drawer, List, ListItem, ListItemText } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Box,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-
+import logo from '../../assets/logo.png'
+import logon from '../../assets/logon.png'
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -19,9 +31,31 @@ const Header = () => {
   return (
     <AppBar position="absolute" sx={{ background: "transparent", boxShadow: "none" }}>
       <Toolbar>
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          Tranca Cam
-        </Typography>
+        {/* Logo y nombre */}
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            flexGrow: 1,
+            gap: 1,
+          }}
+        >
+          <Box
+            component="img"
+            src={logo} // Reemplazá con la ruta real o URL del logo
+            alt="Logo Tranca Cam"
+            sx={{ height: 100 }}
+          />
+          <Typography
+            variant="h6"
+            sx={{
+              fontWeight: "bold",
+              display: { xs: "none", sm: "block" }, // Ocultar en pantallas muy chicas si querés
+            }}
+          >
+            
+          </Typography>
+        </Box>
 
         {/* Botón de menú para pantallas pequeñas */}
         <IconButton
@@ -45,6 +79,12 @@ const Header = () => {
 
       {/* Drawer (Menú lateral) */}
       <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerToggle}>
+        <Box
+            component="img"
+            src={logon} // Reemplazá con la ruta real o URL del logo
+            alt="Logo Tranca Cam"
+            sx={{ height: 230 }}
+          />
         <Box
           sx={{ width: 250 }}
           role="presentation"

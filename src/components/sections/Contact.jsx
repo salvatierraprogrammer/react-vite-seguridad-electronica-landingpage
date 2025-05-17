@@ -18,7 +18,8 @@ const Contact = ({ id }) => {
             variant="contained"
             color="success"
             startIcon={<WhatsAppIcon />}
-            href="https://wa.me/1234567890" // Reemplaza con tu número de WhatsApp
+           href="https://wa.me/5491131034391?text=Hola,%20estoy%20interesado%20en%20su%20servicio%20de%20instalación"
+
             target="_blank"
             sx={{
               display: "flex",
@@ -41,7 +42,7 @@ const Contact = ({ id }) => {
             variant="contained"
             color="primary"
             startIcon={<EmailIcon />}
-            href="mailto:contacto@tucorreo.com" // Reemplaza con tu correo electrónico
+            href="mailto:salvatierradev@gmail.com" // Reemplaza con tu correo electrónico
             target="_blank"
             sx={{
               display: "flex",

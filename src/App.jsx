@@ -6,6 +6,7 @@ import Gallery from "./components/sections/Gallery";
 import Contact from "./components/sections/Contact";
 import { CssBaseline } from "@mui/material";
 import './App.css'
+import FloatingWhatsApp from "./components/FloatingWhatsApp ";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
       <Services id="servicios" />
       <Gallery id="galeria" />
       <Contact id="contacto" />
+      <FloatingWhatsApp />
       <Footer/>
     </>
   );
